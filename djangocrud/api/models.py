@@ -7,3 +7,4 @@ class Songs(models.Model):
     release_date = models.IntegerField()
     gender = models.CharField(max_length=30)
     
+    #13:18
