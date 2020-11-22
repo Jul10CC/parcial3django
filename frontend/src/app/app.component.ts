@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './api.service';
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { ApiService } from './api.service';
   providers: [ApiService]
 })
 export class AppComponent {
-  songs = [{ title: 'Hola' }]
+  songs = [{ title: 'a', 'artist': 'e', 'album': 'i', 'release_date': 'o', 'gender': 'u'}]
 
   constructor(private api: ApiService) {
     this.getSongs();
@@ -16,7 +17,7 @@ export class AppComponent {
   getSongs = () => {
     this.api.getAllSongs().subscribe(
       data => {
-        this.songs = data;
+        this.songs = data.results;
       },
       error => {
         console.log(error);

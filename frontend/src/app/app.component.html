@@ -303,8 +303,7 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="40" alt="Angular Logo"
-    src="https://anthoncode.com/wp-content/uploads/2020/01/logo-vectores.png" />
+  <img width="40" alt="Angular Logo" src="https://anthoncode.com/wp-content/uploads/2020/01/logo-vectores.png" />
   <span>Bienvenido</span>
   <div class="spacer"></div>
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
@@ -320,24 +319,30 @@
 <div class="content" role="main">
 
   <!-- Highlight Card -->
-  <div >
+  <div>
 
     <h2>Listado de Canciones</h2>
   </div>
- 
+
   <table class="table">
     <thead class="bg-warning">
       <tr>
-        <th scope="col">#</th>
-          <th scope="col">Titulo</th>
-            <th scope="col">Articulo</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Artista</th>
+        <th scope="col">Album</th>
+        <th scope="col">Fecha de Lanzamiento</th>
+        <th scope="col">Genero</th>
       </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let songs of songs">
-          <td>{{songs.title}}</td>
-          </tr>
-      </tbody>
-      </table>
-      <router-outlet>
-      </router-outlet>
+    </thead>
+    <tbody>
+      <tr *ngFor="let songs of songs">
+        <td>{{songs.title}}</td>
+        <td>{{songs.artist}}</td>
+        <td>{{songs.album}}</td>
+        <td>{{songs.release_date}}</td>
+        <td>{{songs.gender}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <router-outlet>
+  </router-outlet>

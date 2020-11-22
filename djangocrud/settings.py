@@ -25,13 +25,12 @@ SECRET_KEY = '+3$ji5=*5e4f5p+$zo-f&i)b_v47qtp%^-5^j21ikrscbez_8x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:4200'
-]
-
-
+ALLOWED_HOSTS = ['127.0.0.1']
+CORS_ORIGIN_ALLOW_ALL= True
+CORS_ALLOWED_ORIGINS = (
+     'http://localhost:4200',
+     
+ )
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,9 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djangocrud.api',
     'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,8 +55,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'djangocrud.urls'
