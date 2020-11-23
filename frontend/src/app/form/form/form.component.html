@@ -1,0 +1,40 @@
+<div class="container">
+    <form>
+        <div class="form-grouprow">
+            <label class="col-md-3 form-control-label" for="text-input">Cancion:</label>
+            <div class="col-md-9">
+                <input type="text" v-model="nombre" class="form-control"  [(ngModel)] = "title" placeholder="Ingrese cancion" >
+            </div>
+        </div>
+        <div class="form-grouprow">
+            <label class="col-md-3 form-control-label" for="text-input">Artista:</label>
+            <div class="col-md-9">
+                <input type="text" v-model="nombre" class="form-control" [(ngModel)] = "artist" placeholder="Ingrese artista" >
+            </div>
+        </div>
+        <div class="form-grouprow">
+            <label class="col-md-3 form-control-label" for="text-input">Album:</label>
+            <div class="col-md-9">
+                <input type="text" v-model="nombre" class="form-control"  [(ngModel)] = "album" placeholder="Ingrese album" >
+            </div>
+        </div>
+        <div class="form-grouprow">
+            <label class="col-md-3 form-control-label" for="text-input">Anio de lanzamiento:</label>
+            <div class="col-md-9">
+                <input type="year" v-model="nombre" class="form-control"  [(ngModel)] = "relase_date" placeholder="Ingrese anio" >
+            </div>
+        </div>
+        <div class="form-grouprow">
+            <label class="col-md-3 form-control-label" for="text-input">Genero:</label>
+            <div class="col-md-9">
+                <input type="text" v-model="nombre" class="form-control"  [(ngModel)] = "genre" placeholder="Ingrese genero" >
+            </div>
+        </div>
+        <div class="form-grouprow">
+            <div class="col-md-12">
+                <button type="submit" type="button" class="btn btn-danger" routerLink ="/">Guardar</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+</div>

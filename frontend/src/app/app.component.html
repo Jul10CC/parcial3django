@@ -317,7 +317,7 @@
 </div>
 
 <div class="content" role="main">
-
+<button type="button" class="btn btn-warning" routerLink ="form" style="background-position-x: left;">Agregar Cancion</button>
   <!-- Highlight Card -->
   <div>
 
@@ -336,11 +336,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let songs of songs">
-        <td>{{songs.title}}</td>
-        <td>{{songs.artist}}</td>
-        <td>{{songs.album}}</td>
-        <td>{{songs.release_date}}</td>
-        <td>{{songs.gender}}</td>
+        <td>{{songs.titlea}}</td>
+        <td>{{songs.artista}}</td>
+        <td>{{songs.albuma}}</td>
+        <td>{{songs.release_datea}}</td>
+        <td>{{songs.gendera}}</td>
       </tr>
     </tbody>
   </table>
